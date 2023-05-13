@@ -8,7 +8,7 @@ function EgovDownloadCreate() {
     return(
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
+                {/* <!-- bread crumb --> */}
                 <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
@@ -16,15 +16,9 @@ function EgovDownloadCreate() {
                         <li>분양 등록</li>
                     </ul>
                 </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
-                    {/* <!-- Navigation --> */}
-                    {/* <!--// Navigation --> */}
-
                     <div className="contents PDS_REG" id="contents">
-                        {/* <!-- 본문 --> */}
-
                         <div className="top_tit">
                             <h1 className="tit_1">분양</h1>                            
                         </div>

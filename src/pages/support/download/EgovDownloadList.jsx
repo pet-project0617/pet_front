@@ -68,8 +68,6 @@ function EgovDownloadList() {
                         <h2 className="tit_2">무료나눔</h2>
 
 
-
-
                         <NavLink to={URL.ABOUT_HISTORY2} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 
                         <div className="board_bot">

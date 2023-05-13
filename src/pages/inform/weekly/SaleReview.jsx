@@ -29,8 +29,6 @@ function EgovDailyList(props) {
   const [listTag, setListTag] = useState([]);
   const [listCount, setListCount] = useState(0); //더보기(api 호출하는 방식)
 
-
-
   /**
    * BreadCrumb
    */
@@ -51,7 +49,6 @@ function EgovDailyList(props) {
       </div>
     );
   });
-
 
   /**
    * 조회 목록 세팅
@@ -111,10 +108,7 @@ function EgovDailyList(props) {
     [drawList]
   );
 
-
-  const listMore = useCallback(() => {
-
-  },[listCount])
+  const listMore = useCallback(() => {}, [listCount]);
 
   useEffect(() => {
     retrieveList(searchCondition);
@@ -124,12 +118,10 @@ function EgovDailyList(props) {
     drawList();
   }, [scheduleList]);
 
-
   const listScheduleList = async (data) => {
     setListCount((prev) => prev + 30);
     setScheduleList(data);
   };
-
 
   return (
     <div className="container">
@@ -139,7 +131,7 @@ function EgovDailyList(props) {
           <EgovLeftNav />
           <div className="contents TODAY_SCHEDULE" id="contents">
             <div className="top_tit">
-              <h1 className="tit_1">마켓 후기</h1>
+              <h1 className="tit_1">입양 후기</h1>
             </div>
             <ConditionBar onBeforeSubmit={listScheduleList} selectBar={false} />
             <div className="board_02">{listTag}</div>

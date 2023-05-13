@@ -19,9 +19,6 @@ function EgovContainer() {
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}
-                    <EgovLeftNav></EgovLeftNav>
-                    {/* <!--// Navigation --> */}
-
                     {/* <!-- 본문 --> */}
                     <div className="contents WEEK_SCHEDULE" id="contents">
 

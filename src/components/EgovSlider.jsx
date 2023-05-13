@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import PropTypes from "prop-types";
+// import Table1 from "./table1";
 import "../css/slick-theme.css";
 import "../css/slick.css";
 
@@ -9,18 +9,19 @@ const setting = {
   dots: false,
   infinite: true,
   speed: 800,
-  slidesToShow: 5,
+  slidesToShow: 6,
   slidesToScroll: 3,
   centerPadding: "0px",
-  //   nextArrow: <SlideBtn />,
-  //   prevArrow: <SlideBtn />,
+//   nextArrow: <SlideBtn />,
+//   prevArrow: <SlideBtn />,
 };
 
-const Table1 = ({ data }) => {
+const ContentSlider = ({ data }) => {
   return (
-    <NavLink
-      to={URL.ABOUT_HISTORY}
-      className={({ isActive }) => (isActive ? "cur" : "")}
+    <div
+      style={{
+        width: "100vw",
+      }}
     >
       <Slider {...setting}>
         {data.map(({ imageSrc, title, description, user }, index) => (
@@ -34,8 +35,12 @@ const Table1 = ({ data }) => {
           </div>
         ))}
       </Slider>
-    </NavLink>
+    </div>
   );
 };
 
-export default Table1;
+ContentSlider.propTypes = {
+  data: PropTypes.array.isRequired,
+};
+
+export default ContentSlider;
