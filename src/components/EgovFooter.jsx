@@ -13,7 +13,7 @@ function EgovFooter() {
                 <div className="info">
                     안전한 동물 분양 사이트
                     <p>
-                        대표문의메일 : jy287454@gmail.com <span className="m_hide">|</span><br className="m_show" />  대표전화 :  010-s-1769<br />
+                        대표문의메일 : jy287454@gmail.com <span className="m_hide">|</span><br className="m_show" />  대표전화 :  010-000-000<br />
                
                     </p>
                     <br/>

@@ -47,7 +47,7 @@ body {min-width: 1400px;}
 
 .container {min-height: calc(100vh - 300px);}
 .c_wrap {width: 1800px; margin: 0 auto; padding: 0 50px;}
-.c_wrap .layout {display: table; width: 100%; table-layout: fixed;}
+.c_wrap .layout {display: table; width: 100%; table-layout: fixed; border: 1px solid black;}
 
 /* sub navigation */
 .c_wrap .layout .nav {display: table-cell; width: 200px; vertical-align: top; }
@@ -59,7 +59,7 @@ body {min-width: 1400px;}
 .c_wrap .layout .nav ul li a:hover::after {content: ""; display: block; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); width: 9px; height: 15px; background: url(css/images/ico_arrow_r_gray_9x15.png) no-repeat;}
 .c_wrap .layout .nav ul li a.cur {color: #222; font-weight: 700;}
 
-.c_wrap .layout .contents {display: table-cell; width: auto; padding: 0 0 120px 70px; vertical-align: top;}
+.c_wrap .layout .contents {display: table-cell; width: auto; padding: 0 0 120px 70px; vertical-align: top; }
 
 
 /* location */

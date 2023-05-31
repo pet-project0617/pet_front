@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavSupport';
 
@@ -9,8 +10,8 @@ function EgovSupportApply() {
                 {/* <!-- Location --> */}
                 <div className="location">
                     <ul>
-                        <li><a className="home" href="#!">Home</a></li>
-                        <li><a href="#!">마켓</a></li>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
+                        <li><Link to="">마켓</Link></li>
                         <li>용품 주의</li>
                     </ul>
                 </div>

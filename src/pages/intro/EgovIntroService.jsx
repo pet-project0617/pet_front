@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavIntro';
 import Table1 from 'components/table1';
 function EgovIntroService() {
@@ -23,7 +24,7 @@ function EgovIntroService() {
             {/* <!-- Location --> */}
             <div className="location">
                 <ul>
-                    <li><a className="home" href="#!">Home</a></li>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
                     <li><a href="#!">반려동물 분양</a></li>
                     <li>가정 분양</li>
                 </ul>
@@ -44,7 +45,8 @@ function EgovIntroService() {
                     
                     <h2 className="tit_4">가정 분양</h2>
 
-                    <Table1 data={data} />
+<br/><br/>
+<NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
                     
                     <div className="board_bot">
                             {/* <!-- Paging --> */}

@@ -1,7 +1,7 @@
 .slider-area{
     /* position: relative; */
     /* overflow: hidden; */
-    height:  900px;
+    height:  800px;
     width: auto;
     margin-bottom: 150px;
 
@@ -46,7 +46,7 @@
 
 .slider-item{
     position: relative;
-    height: 1000px;
+    height: 750px;
     padding: 10px;
     float: left;
     /* width: 200px; */

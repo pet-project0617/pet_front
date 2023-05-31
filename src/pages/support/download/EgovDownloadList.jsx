@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , NavLink} from 'react-router-dom';
 
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavSupport';
 import URL from 'constants/url';
@@ -70,7 +70,7 @@ function EgovDownloadList() {
                 {/* <!-- Location --> */}
                 <div className="location">
                     <ul>
-                        <li><Link to="" className="home">Home</Link></li>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
                         <li><Link to="">마켓</Link></li>
                         <li>무료나눔</li>
                     </ul>
@@ -94,7 +94,7 @@ function EgovDownloadList() {
 
 
 
-                        <Table1 data={data} />
+                        <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 
                         <div className="board_bot">
                             {/* <!-- Paging --> */}

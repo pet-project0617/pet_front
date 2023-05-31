@@ -41,7 +41,7 @@
     .all_menu.Mobile ul { padding: 9px 0; background: #f5f8fa; }
     .all_menu.Mobile ul li a {display: block; padding: 11px 30px; color: #222; font-size: 14px;}
 
-    .c_wrap {width: 100%; padding: 0;}
+    .c_wrap {width: 100%; padding: 0; border: #000 1px solids;}
     .c_wrap .layout {display: block; left: 300px;}
     .c_wrap .layout .nav {display: block; position: relative; width: 100%;}
     .c_wrap .layout .nav .inner {border: 0; border-radius: 0; border-bottom: 1px solid #e6e6e6; overflow-x: auto; -ms-overflow-style: none; box-shadow: 3px 4px 5px #ccc;}

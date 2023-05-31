@@ -5,6 +5,7 @@ function Content() {
     return (
         <main >
             <Slider />
+            
         </main>
     );
 }

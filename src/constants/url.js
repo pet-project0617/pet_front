@@ -23,6 +23,7 @@ const URL = {
     SUPPORT_DOWNLOAD            : "/support/download", // 고객지원/자료실
     SUPPORT_DOWNLOAD_DETAIL     : "/support/download/detail", // 고객지원/자료실/상세
     SUPPORT_DOWNLOAD_CREATE     : "/support/download/create", // 고객지원/자료실/등록
+    SUPPORT_DOWNLOAD_CREATE2     : "/support/download/create2", // 고객지원/자료실/등록2
     SUPPORT_QNA                 : "/support/qna", // 고객지원/묻고답하기
     SUPPORT_QNA_DETAIL          : "/support/qna/detail", // 고객지원/묻고답하기/상세
     SUPPORT_APPLY               : "/support/apply", // 고객지원/서비스신청

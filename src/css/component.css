@@ -186,8 +186,7 @@ input[type=password],
 input[type=email],
 input[type=search],
 input[type=image],
-input[type=tel] {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-appearance: none;}
-
+input[type=tel] {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
 /* for IE10 */
 input::placeholder {color: #aaa; opacity: 1; /* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */}
 input::-webkit-input-placeholder {color: #aaa;}
@@ -269,6 +268,7 @@ select::-ms-expand {display:none;}
     justify-content: center;
     align-items: center;
     position: relative;
+    color: black;
     /* justify-content: flex-start; */
   }
   .card-image {
@@ -368,13 +368,33 @@ select::-ms-expand {display:none;}
   }
 
 
-
-  .card3{
-    width: 1000px;
-    background-color: #000;
+  .card3 {
+    box-shadow: 0 3px 6px rgb(205, 205, 205);
+    width: 1550px;
     height: 700px;
+    border-radius: 10px;
+    margin-top: -30px;
   }
-
+.btn_card{
+  background-color: rgb(255, 229, 168);
+  padding: 15px;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 180px;
+}
+  .card-image3{
+    /* 스크롤 이미지 추가.. */
+    width: 700px;
+    height: 600px;
+    margin: 50px;
+  }
+  .card-text3{
+    float: right;
+    margin-right: 100px;
+    margin-top: 70px;
+  }
+  
 /* Text */
 .txt_1 {color: #666; font-size: 20px; line-height: 30px;}
 
@@ -382,7 +402,7 @@ select::-ms-expand {display:none;}
 /* Maessage box */
 .msg_1 {padding: 33px 40px; border-top: 2px solid #dde2e5; border-radius: 0 0 10px 10px; color: #454545; font-size: 20px; line-height: 30px; letter-spacing: -1px; background: #f7f7f7;}
 
-.table11{padding: 33px 40px;  font-size: 20px; line-height: 30px; letter-spacing: -1px; background: #fffefe;  box-shadow: 0 3px 6px rgba(206, 206, 206, 0.16), 0 3px 6px rgba(223, 223, 223, 0.23);}
+.table11{padding: 33px 40px;  font-size: 20px; line-height: 30px; letter-spacing: -1px; background: #fffefe;      box-shadow: 0 3px 6px rgb(205, 205, 205)};
 
 
 /* List */
@@ -397,3 +417,79 @@ select::-ms-expand {display:none;}
 
 /* 리액트 관련 */
 .react-datepicker__tab-loop {display: inline-block;}
+
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* background-color: #f2f2f2; */
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card_p{
+  border: 1px solid rgb(219, 219, 219);
+}
+
+input {
+
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+img {
+
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+}
+
+.search-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.search-list li + li {
+  margin-left: 10px;
+}
+
+.search-list label {
+  margin-right: 10px;
+}
+
+.search-list select,
+.search-list input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-list button {
+  background-color: #fcd2a1;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-list button:hover {
+  background-color: #3e8e41;
+}

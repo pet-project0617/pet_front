@@ -165,6 +165,8 @@ function EgovGalleryList(props) {
                                 }
                             </ul>
                         </div>
+
+                        
                         {/* <!--// 검색조건 --> */}
 
                         {/* <!-- 게시판목록 --> */}

@@ -6,23 +6,20 @@ import URL from 'constants/url';
 
 function EgovDownloadCreate() {
     return(
-        <div className="container" >
+        <div className="container">
             <div className="c_wrap">
                 {/* <!-- Location --> */}
-                <div>  
-                    <div className="location">
+                <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to="">마켓</Link></li>
+                        <li><Link to="">분양</Link></li>
                         <li>물품 등록</li>
                     </ul>
                 </div>
                 {/* <!--// Location --> */}
-                
-                
+
                 <div className="layout">
                     {/* <!-- Navigation --> */}
-                  
                     {/* <!--// Navigation --> */}
 
                     <div className="contents PDS_REG" id="contents">
@@ -116,9 +113,6 @@ function EgovDownloadCreate() {
 
                         {/* <!--// 본문 --> */}
                     </div>
-                </div>
-              
-
                 </div>
             </div>
         // </div>

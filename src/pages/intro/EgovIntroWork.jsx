@@ -55,9 +55,10 @@ function EgovIntroWork() {
             <div className="c_wrap">
                 {/* <!-- Location --> */}
                 <div className="location">
+                    
                     <ul>
-                        <li><a className="home" href="#!">Home</a></li>
-                        <li><a href="#!">반려동물 분양</a></li>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
+                        <li><Link to="">반려동물 분양</Link></li>
                         <li>유기동물 분양</li>
                     </ul>
                 </div>
@@ -80,38 +81,39 @@ function EgovIntroWork() {
                         
                         
                         <h2 className="tit_4">유기동물 분양</h2> <br/>
-                        <div className="condition" style={{ width:'1350px', height:'40px' , borderRadius:'60px'}}>
-  <div>
-  <ul> 
-    <div>
+                        {/* <div className="search-container">
+                          <div>
+                          <ul className="search-list">
     <li>
-      <label className="f_select" htmlFor="sel1">
-        <select defaultValue={"0"} name="search_select" id="search_select">
+      <label className='card_p'>
+        <select defaultValue="0" name="search_select">
           <option value="0">전체</option>
           <option value="1">강아지</option>
           <option value="2">고양이</option>
           <option value="3">소동물</option>
-          <option value="4">집사 용품</option>
         </select>
       </label>
     </li>
-    </div>
-
-<div>
-<li>
-      <span className="f_search w_500">
-        <input type="text" name="" placeholder=""/>
-        <button type="button">조회</button>
-      </span>
-    </li>
-
-</div>
-    
+    <li>
+      <span>
+      <input type="text" placeholder="검색어 입력" style={{marginLeft:'200px'}}/>
+      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></img>
+     </span>
+    </li> 
   </ul>
-  </div>
- 
+
+  <div class="search-container">
+  <form class="search-form">
+    <ul class="search-list">
+      <li><input type="text" placeholder="검색어를 입력하세요."/></li>
+      <li><button type="submit">검색</button></li>
+    </ul>
+  </form>
 </div>
-                        
+                          </div>
+  
+</div> */}
+        
  <br></br>
                  <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 

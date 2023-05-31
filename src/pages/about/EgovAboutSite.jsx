@@ -10,7 +10,7 @@ function EgovAboutSite() {
                 {/* <!-- Location --> */}
                 <div className="location">
                     <ul>
-                        <li><Link to="" className="home">Home</Link></li>
+                    <li><Link to={URL.MAIN} className="home" >Home</Link></li>
                         <li><Link to="">사이트 소개</Link></li>
                         <li>소개</li>
                     </ul>
@@ -27,7 +27,7 @@ function EgovAboutSite() {
 
                         <h1 className="tit_3">사이트 소개</h1>
 
-                        <p className="txt_1">안녕하세요. 사랑이 가득한 안전한 동물 분양 사이트 입니다.</p>
+                        <p className="txt_1">안녕하세요. <br/>사랑이 가득한 안전한 동물 분양 사이트 입니다.</p>
                         
                         <h2 className="tit_4">소개 및 목적</h2>
                         <br/>
@@ -37,7 +37,7 @@ function EgovAboutSite() {
                             우리 사이트는 반려동물 분양사기 및 무분별한 번식을 막고 생명에 대한 책임감을 보여주기 위하여 만들었습니다.<br />
                            분양사기나 불법 분양등의 생명에 대한 책임감이 없는 사용자들은 일반 사용자들에게 피해를 끼치지 않게 사용자 정보를 관리하며 노력하겠습니다.<br/>
                             <br/>감사합니다.</p><br/>
-
+                            <br/>
                             <h2 className="tit_4">*동물보호법 및 처벌규정</h2>
                         <br/>
                         <p className="table11">- 동물보호법 제2조 "동물학대"가 동물을 대상으로 정당한 사유 없이 불필요하거나 피할 수 있는 신체적 고통과 스트레스를 주는 행위 및 굶주림, 질병 등에 대하여 적절한 조치를 게을리하거나 방치하는 행위를 말한다고 규정하고 있다.<br />

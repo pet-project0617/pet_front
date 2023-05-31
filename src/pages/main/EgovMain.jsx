@@ -14,7 +14,7 @@ function EgovMain(props) {
           description: "2개월 포메"
         },
         {
-          imageSrc: "/images/11.jpg",
+          imageSrc: "/images/3.jpg",
           title: "동대문구 동물보호소",
           description: "3개월 길냥이"
         },
@@ -123,14 +123,22 @@ function EgovMain(props) {
         <div>
           <Slider/>
           <br/>
+          {/* <div style={{width:'1600px', backgroundColor:'gray', height:'0.2px', marginLeft:'200px'}}>
+
+          </div> */}
           <div className='media-text' style={{ marginLeft: '50px', marginTop:'100px' }}>
+    
+    <div style={{marginLeft:'100px', marginTop:'100px'}}>
     <h2>근처 보호소에 있는 유기동물</h2>
     <br/><br/>
     <div style={{background:"black", width:'1200px'}}></div>
     <p>전국에 있는 동물 보호소는 206곳으로 보호 센터가 있으며<br/>
-         자세한 위치는 <a href='https://www.animal.go.kr/front/index.do'><b>국가동물보호정보시스템</b> </a>에서 확인하실 수 있습니다.<br/>
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/>
-           It has survived not only five centuries,</p>
+         자세한 위치는 <a href='https://www.animal.go.kr/front/index.do' style={{color:'black'}}><b>국가동물보호정보시스템</b> </a>에서 확인하실 수 있습니다.<br/>
+          유기동물들도 우리와 같은 생명입니다. <br/>
+           언제나 같은 자리에서 가족을 기다리고 있습니다.</p>
+        </div>
+   
+   
                      <div className='card-main'>
             {/* <Table2
               imageSrc={"/assets/images/1.png"}
@@ -159,23 +167,24 @@ function EgovMain(props) {
 
 
           <div style={{ display: 'flex', margin:'50px', marginBottom:'200px' }}>
-  <div className="media-container" style={{ width: '1200px', height: '600px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <iframe width="1000" height="600" src="https://www.youtube-nocookie.com/embed/RjWbd3MQnrU?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+  <div className="media-container" style={{ marginLeft:'50px', width: '1000px', height: '500px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/RjWbd3MQnrU?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
   </div>
-  <div className='media-text' style={{ marginLeft: '50px', marginTop:'100px' }}>
-    <h2>What is Lorem Ipsum?</h2>
+  <div className='media-text' style={{ marginLeft: '50px', marginTop:'120px' }}>
+    <h2>반려동물은 장난감이 아니에요</h2>
     <br/><br/>
     <div style={{background:"black", width:'1200px'}}></div>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/>
-         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/>
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/>
-           It has survived not only five centuries,</p>
-           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/>
-         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br/>
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/>
-           It has survived not only five centuries,</p>
+    <p>인간의 삶을 변화시키고 긍정적인 에너지를 생기게 도와줘요.<br/>
+         반려동물의 체온은 사람보다 1~2도 가량 높아요. 안으면 따뜻할 뿐만 아니라 포근한 털이 있어서 정서적 안정을 줘요.<br/>
+           불안감, 스트레스, 맥박, 혈랍압 등에서 헌저한 개선 효과를 얻을 수 있어요.</p>
+           <p>동물보호단체에서는 "반려동물을 쉽게 살 수 있는 구조가 생명 경시 풍토를 조성한다"라고 말했어요<br/>
+            인간의 생명과 같이 동물의 생명도 소중하답니다.<br/>
+          반려동물을 상업적 목적으로 활용하지 말아주세요. 지능이 낮더라도 생각하고 조금씩 표현 할 수 있어요.<br/>
+           반려동물은 가족이에요, 인간보다 짧은 시간을 가졌지만 그 짧지만 전부인 시간 속에서 인간을 대가없이 좋아해줘요.<br/>
+           책임감을 가지고 반려동물의 인생을 행복하게 해줍시당 :)</p>
   </div>
 </div>
+<br/><br/><br/>
         </div>
       );
 }

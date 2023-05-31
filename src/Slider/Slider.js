@@ -153,6 +153,7 @@ function Slider() {
     return (
         <div className="slider-area">
             <div className="slider">
+                {/* <div>아이짱 사랑해</div> */}
                 {/* <SlideButton direction="prev" onClick={() => handleSwipe(-1)} /> */}
                 {/* <SlideButton direction="next" onClick={() => handleSwipe(1)} /> */}
                 <div className="slider-list" style={{ padding: sliderPaddingStyle , marginLeft:'50px', borderRadius:'10px'}}>

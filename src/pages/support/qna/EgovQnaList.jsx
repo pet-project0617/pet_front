@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , NavLink} from 'react-router-dom';
 import Table1 from 'components/table1';
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavSupport';
 import URL from 'constants/url';
@@ -27,7 +27,7 @@ function EgovQnaList() {
                 {/* <!-- Location --> */}
                 <div className="location">
                     <ul>
-                        <li><Link to="" className="home">Home</Link></li>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
                         <li><Link to="">마켓</Link></li>
                         <li>중고 마켓</li>
                     </ul>
@@ -48,7 +48,7 @@ function EgovQnaList() {
                         
                         <h2 className="tit_2">중고 마켓</h2>
 
-                        <Table1 data={data} />
+                        <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 
                         <div className="board_bot">
                             {/* <!-- Paging --> */}
