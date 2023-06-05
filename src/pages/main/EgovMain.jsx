@@ -137,34 +137,25 @@ function EgovMain(props) {
           유기동물들도 우리와 같은 생명입니다. <br/>
            언제나 같은 자리에서 가족을 기다리고 있습니다.</p>
         </div>
-   
-   
                      <div className='card-main'>
-            {/* <Table2
-              imageSrc={"/assets/images/1.png"}
-                title={"test1"}
-                description={"2개월 포메"}
-            /> */}
             <Table2 data={data} />
-               {/* <Table2
-              imageSrc={"/assets/images/1.png"}
-                title={"검둥이 가족 찾아요"}
-                description={"2개월 포메"}
-            /> */}
             </div>
   
   </div>
-         
 
-         <div style={{ display: 'flex', margin:'200px', marginLeft:'350px' }}>
-  <div className="media-container" style={{ width: '1200px', height: '600px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <h4 style={{ marginTop:'-500px', marginLeft:'-270px'}}>최근 10년 내에 버려진 유기동물 통계표</h4>
-  <p style={{fontSize:"150px"}}>Recharts</p>
-
+  <div style={{ display: 'flex', margin:'200px', marginLeft:'150px' }}>
+  <div className="media-container" style={{  width: '1000px', height: '460px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  <img src="/images/charts.png" style={{ width:'900px', height:'360px', marginTop:'50px'}}/>
+  <div style={{ position: 'absolute', top: '10px', left: '10px', fontSize :'20px', fontWeight: 'bold', textAlign: 'center', width: '100%' }}>유기동물 폐사(안락사) 통계표</div>
+</div>
   </div>
 
+<div style={{ marginTop:'400px', marginLeft:'30px'}}>
+<p>서울시 유기동물 폐사(안락사) 최근 5년 이내의 통계표 <br/>
+출처 : 서울 열린데이터광장(서울시 유기동물보호 현황 통계)</p>
 </div>
-
+</div>
 
           <div style={{ display: 'flex', margin:'50px', marginBottom:'200px' }}>
   <div className="media-container" style={{ marginLeft:'50px', width: '1000px', height: '500px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

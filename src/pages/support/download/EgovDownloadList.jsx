@@ -38,30 +38,6 @@ function EgovDownloadList() {
             description: "test",
             user:"지연"
           },
-          {
-            imageSrc: "",
-            title: "test",
-            description: "test",
-            user:"지연"
-          },
-          {
-            imageSrc: "",
-            title: "test",
-            description: "test",
-            user:"지연"
-          },
-          {
-            imageSrc: "",
-            title: "test",
-            description: "test",
-            user:"지연"
-          },
-          {
-            imageSrc: "",
-            title: "test",
-            description: "test",
-            user:"지연"
-          },
           
       ]
     return(
@@ -94,7 +70,7 @@ function EgovDownloadList() {
 
 
 
-                        <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
+                        <NavLink to={URL.ABOUT_HISTORY2} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 
                         <div className="board_bot">
                             {/* <!-- Paging --> */}

@@ -1,49 +1,87 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavSupport';
 import URL from 'constants/url';
-import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavAbout';
 
-function EgovAboutOrganization() {
-    return (
+function EgovDownloadCreate() {
+    return(
         <div className="container">
             <div className="c_wrap">
                 {/* <!-- Location --> */}
                 <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to={URL.ABOUT}>사이트 소개</Link></li>
-                        <li>조직소개</li>
+                        <li><Link to="">분양</Link></li>
+                        <li>분양 등록</li>
                     </ul>
                 </div>
                 {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}
-                    <EgovLeftNav></EgovLeftNav>
                     {/* <!--// Navigation --> */}
 
-                    <div className="contents SITE_INTRO" id="contents">
+                    <div className="contents PDS_REG" id="contents">
                         {/* <!-- 본문 --> */}
 
-                        <h1 className="tit_3">사이트 소개</h1>
+                        <div className="top_tit">
+                            <h1 className="tit_1">마켓</h1>                            
+                        </div>
+                        
+                        <h2 className="tit_2">물품 등록</h2>  
+                        {/* 무료나눔 중고 마켓 구분 */}
 
-                        <p className="txt_1">표준프레임워크 경량환경 포털사이트를 소개합니다.</p>
+                        {/* <!-- 상세 --> */}
+                        <div className="board_view3">
+                            <div className="tit_edit">
+                                <dl>
+                                    <dt><label htmlFor="writer">제목</label></dt>
+                                    <dd>
+                                        <input className="f_input2 w_full" type="text" name="writer" id="writer"/>
+                                    </dd>
+                                </dl>
+                            </div>
 
-                        <h2 className="tit_4">조직소개</h2>
+                            <div className="info">
+                                {/* db에서 불러와야하는 부분 */}
+                                <dl>    
+                                    <dt>작성자</dt>
+                                    <dd>test</dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <dd>2023-05-31 18:04</dd>
+                                </dl>
+                            </div>
+                            <br/>
+                            <h3 className="tit_5"><label htmlFor="pdsnm">설명 입력</label></h3> 
+                            
+                            
 
-                        <h3 className="tit_5">조직</h3>
+<div className="pds_desc_edit">
+    <textarea className="f_txtar w_full" name="" id="pdsnm" cols="30" rows="10"></textarea>
+<input className="w_full" type="file" name="" id="ip4" style={{ display: 'inline-block' }}/>
+</div>
 
-                        <p className="msg_1">오픈커뮤니티의 초기 정착을 위해 표준프레임워크 개발 참여자와 국내 주요 오픈커뮤니티의 운영자·전문가를 리딩<br />
-                            그룹(PMC, 커미터)으로 구성 오픈커뮤니티의 지속적인 확대·발전을 위해 프로젝트 활동에 적극적으로 참여하는 <br />
-                            커뮤니티 회원이 리딩그룹의 역할을 획득할 수 있도록 투명하고 공정한 의사결정 체계를 수립</p>
+<p style={{marginTop:'-20px'}}>분양 설명에는 거래하는 장소나 병원 기록 등 자세하게 적어주세요 :)</p>
+<br/>
+<div className="board_btn_area">
+                            <div className="left_col btn1">
+                            </div>
 
-                        {/* <!--// 본문 --> */}
+                            <div className="right_col btn1">
+                                <Link to={URL.INTRO_WORKS} className="btn btn_blue_h46 w_100">등록</Link>
+                            </div>
+                        </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 
-export default EgovAboutOrganization;
+export default EgovDownloadCreate;

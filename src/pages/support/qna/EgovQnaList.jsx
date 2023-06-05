@@ -48,7 +48,7 @@ function EgovQnaList() {
                         
                         <h2 className="tit_2">중고 마켓</h2>
 
-                        <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
+                        <NavLink to={URL.ABOUT_HISTORY2} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
 
                         <div className="board_bot">
                             {/* <!-- Paging --> */}

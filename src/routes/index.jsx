@@ -13,9 +13,11 @@ import EgovError from 'components/EgovError';
 import EgovMain from 'pages/main/EgovMain';
 import EgovLogin from 'pages/login/EgovLogin';
 
+
 //ABOUT
 import EgovAboutSite from 'pages/about/EgovAboutSite';
 import EgovAboutHistory from 'pages/about/EgovAboutHistory';
+import EgovAboutHistory2 from 'pages/about/EgovAboutHistory2';
 import EgovAboutOrganization from 'pages/about/EgovAboutOrganization';
 import EgovAboutLocation from 'pages/about/EgovAboutLocation';
 
@@ -27,6 +29,7 @@ import EgovIntroService from 'pages/intro/EgovIntroService';
 import EgovSupportDownloadList from 'pages/support/download/EgovDownloadList';
 import EgovSupportDownloadDetail from 'pages/support/download/EgovDownloadDetail';
 import EgovSupportDownloadCreate from 'pages/support/download/EgovDownloadCreate';
+import EgovSupportDownloadCreate2 from 'pages/support/download/EgovDownloadCreate2';
 import EgovSupportQnaList from 'pages/support/qna/EgovQnaList';
 import EgovSupportQnaDetail from 'pages/support/qna/EgovQnaDetail';
 import EgovSupportApply from 'pages/support/apply/EgovSupportApply';
@@ -157,6 +160,7 @@ const SecondRoutes = () => {
         <Route path={URL.ABOUT} element={<Navigate to={URL.ABOUT_SITE} />} />
         <Route path={URL.ABOUT_SITE} element={<EgovAboutSite />} />
         <Route path={URL.ABOUT_HISTORY} element={<EgovAboutHistory />} />
+        <Route path={URL.ABOUT_HISTORY2} element={<EgovAboutHistory2 />} />
         <Route path={URL.ABOUT_ORGANIZATION} element={<EgovAboutOrganization />} />
         <Route path={URL.ABOUT_LOCATION} element={<EgovAboutLocation />} />
 
@@ -171,6 +175,7 @@ const SecondRoutes = () => {
         <Route path={URL.SUPPORT_DOWNLOAD} element={<EgovSupportDownloadList />} />
         <Route path={URL.SUPPORT_DOWNLOAD_DETAIL} element={<EgovSupportDownloadDetail />} />
         <Route path={URL.SUPPORT_DOWNLOAD_CREATE} element={<EgovSupportDownloadCreate />} />
+        <Route path={URL.SUPPORT_DOWNLOAD_CREATE2} element={<EgovSupportDownloadCreate2 />} />
 
         <Route path={URL.SUPPORT_QNA} element={<EgovSupportQnaList />} />
         <Route path={URL.SUPPORT_QNA_DETAIL} element={<EgovSupportQnaDetail />} />

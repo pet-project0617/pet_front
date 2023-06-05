@@ -115,8 +115,8 @@ function EgovIntroWork() {
 </div> */}
         
  <br></br>
-                 <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
-
+ <NavLink to={URL. ABOUT_HISTORY} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>
+   
                           
                         <div className="board_bot">
                             {/* <!-- Paging --> */}
@@ -142,7 +142,7 @@ function EgovIntroWork() {
                             </div>
 
                             <div className="right_col btn1">
-                                <Link to={URL.SUPPORT_DOWNLOAD_CREATE} className="btn btn_upload"><span>분양 등록</span></Link>
+                                <Link to={URL.SUPPORT_DOWNLOAD_CREATE2} className="btn btn_upload"><span>분양 등록</span></Link>
                             </div>
                         </div>
 

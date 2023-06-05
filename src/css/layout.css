@@ -47,7 +47,7 @@ body {min-width: 1400px;}
 
 .container {min-height: calc(100vh - 300px);}
 .c_wrap {width: 1800px; margin: 0 auto; padding: 0 50px;}
-.c_wrap .layout {display: table; width: 100%; table-layout: fixed; border: 1px solid black;}
+.c_wrap .layout {display: table; width: 100%; table-layout: fixed; }
 
 /* sub navigation */
 .c_wrap .layout .nav {display: table-cell; width: 200px; vertical-align: top; }
