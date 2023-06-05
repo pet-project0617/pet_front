@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import * as EgovNet from 'api/egovFetch';
-
+import { Link } from 'react-router-dom';
 import URL from 'constants/url';
 import CODE from 'constants/code';
 
@@ -123,8 +123,8 @@ function EgovLoginContent(props) {
                             <button type="button" onClick={submitFormHandler}><span>LOGIN</span></button>
                         </fieldset>
                     </form>
-                    <div style={{fontSize:'13px',float:'right'}}>
-                        회원가입
+                    <div style={{fontSize:'13px',float:'right', color:'black'}}>
+                    <Link to={URL.INFORM_GALLERY} style={{color:'black'}}>회원가입</Link>
                     </div>
                 </div>
 

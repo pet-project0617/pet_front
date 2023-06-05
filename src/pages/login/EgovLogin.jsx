@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import EgovLoginContent from 'pages/login/EgovLoginContent';
-
+import Register from 'components/Register'
 import URL from 'constants/url';
 
 function EgovLogin(props) {
@@ -33,6 +33,7 @@ function EgovLogin(props) {
                     <EgovLoginContent
                         onChangeLogin={onChangeLogin}
                     ></EgovLoginContent>
+                    {/* <Register /> */}
                 </div>
             </div>
         </div>

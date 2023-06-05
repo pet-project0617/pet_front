@@ -157,7 +157,7 @@ function EgovMain(props) {
 </div>
 </div>
 
-          <div style={{ display: 'flex', margin:'50px', marginBottom:'200px' }}>
+          <div style={{ display: 'flex', margin:'110px', marginBottom:'200px' }}>
   <div className="media-container" style={{ marginLeft:'50px', width: '1000px', height: '500px', boxShadow: '0 0 10px 5px rgb(239, 239, 239)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/RjWbd3MQnrU?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
   </div>
