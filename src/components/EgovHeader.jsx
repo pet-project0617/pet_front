@@ -7,8 +7,6 @@ import URL from "constants/url";
 import CODE from "constants/code";
 
 function EgovHeader({ loginUser, onChangeLogin }) {
-  console.group("EgovHeader");
-  console.log("[Start] EgovHeader ------------------------------");
 
   const sessionUser = sessionStorage.getItem("loginUser");
   const sessionUserId = JSON.parse(sessionUser)?.id;

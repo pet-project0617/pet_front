@@ -76,6 +76,10 @@ button {cursor: pointer;}
 .w_350 {width: 350px;}
 .w_400 {width: 400px;}
 .w_500 {width: 500px;}
+.w50p {width: 50%;}
+.w70p {width: 70%;}
+.w80p {width: 80%;}
+.w100p {width: 100%;}
 
 .h_30 {height: 30px;}
 .h_100 {height: 100px;}

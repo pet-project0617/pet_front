@@ -7,6 +7,12 @@ import Slider from "Slider/Slider";
 import Table2 from "components/table2";
 import ContentSlider from "components/EgovSlider";
 
+/**
+ * MAIN PAGE
+ * author: ms.kim
+ * @param {*} props 
+ * @returns 
+ */
 function EgovMain(props) {
   const data = [
     {
