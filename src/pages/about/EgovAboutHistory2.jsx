@@ -25,7 +25,7 @@ function EgovAboutHistory() {
                 <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to={URL.ABOUT}>마켓</Link></li>
+                        <li><Link to={URL.SUPPORT_DOWNLOAD}>마켓</Link></li>
                         <li>해당 게시물 상세</li>
                     </ul>
                 </div>

@@ -12,7 +12,7 @@ function EgovDownloadCreate() {
                 <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to="">분양</Link></li>
+                        <li><Link to={URL.INTRO_WORKS}>분양</Link></li>
                         <li>분양 등록</li>
                     </ul>
                 </div>

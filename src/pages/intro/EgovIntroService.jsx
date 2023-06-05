@@ -1,8 +1,9 @@
 import React from 'react';
-// import { Link, NavLink } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavIntro';
 import Table1 from 'components/table1';
+import URL from 'constants/url';
+
 function EgovIntroService() {
     const data = [
     

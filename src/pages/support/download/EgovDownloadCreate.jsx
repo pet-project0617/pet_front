@@ -13,7 +13,7 @@ function EgovDownloadCreate() {
                     <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to="">마켓</Link></li>
+                        <li><Link to={URL.SUPPORT_DOWNLOAD}>마켓</Link></li>
                         <li>물품 등록</li>
                     </ul>
                 </div>
