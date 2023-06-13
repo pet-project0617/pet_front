@@ -1,4 +1,4 @@
-# 표준프레임워크 심플홈페이지 FrontEnd
+# 동물분양 사이트 
 
 ![react](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -13,8 +13,7 @@
 
 ### 프로젝트 개요
 
-단순 홈페이지 기능 구현 시 필수적인 부분만 사용 가능하도록 경량화 된 실행환경 제공  
-메인 페이지, 사용자 관리, 공지사항 관리, 게시판 관리, 안내 관리 기능을 제공
+전자정부표준프레임워크를 활용하여 구현
 
 ### 메뉴 구성
 
