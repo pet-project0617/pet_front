@@ -5,6 +5,7 @@ import * as EgovNet from "api/egovFetch";
 import URL from "constants/url";
 import CODE from "constants/code";
 import SearchBar from "components/SearchBar";
+import EgovDatePicker from "pages/inform/weekly/EgovDatePicker";
 
 const ConditionBar = ({ selectBar = true, onBeforeSubmit }) => {
   const DATE = new Date();
@@ -138,44 +139,44 @@ const ConditionBar = ({ selectBar = true, onBeforeSubmit }) => {
   const onSearch = (e) => {
     const test = [
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "가나다",
         date: "2023-04-01",
         content: "강아지가 친절하고 사장님이 귀여워요",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "test",
         date: "2023-04-01",
         content: "어쩌구",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "이히히",
         date: "2023-04-01",
         content: "어머님이 누구니",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "퇴근하고싶다",
         date: "2023-04-01",
         content:
           "퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "퇴근",
         date: "2023-04-01",
         content: "퇴근",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "퇴근",
         date: "2023-04-01",
         content: "강아지: 퇴근하고싶다",
       },
       {
-        info: "2세 포메",
+        name: "2세 포메",
         user: "가나다",
         date: "2023-04-01",
         content: "강아지가 친절하고 사장님이 귀여워요",
@@ -184,8 +185,11 @@ const ConditionBar = ({ selectBar = true, onBeforeSubmit }) => {
     onBeforeSubmit(test);
   };
   return (
-    <div className="condition">
+    <section className="condition">
       <ul>
+        {/* <li>
+          <EgovDatePicker/>
+        </li> */}
         <li>
           {selectBar && (
             <label className="f_select" htmlFor="sel1">
@@ -210,51 +214,6 @@ const ConditionBar = ({ selectBar = true, onBeforeSubmit }) => {
             </label>
           )}
         </li>
-        <li>
-          <button
-            className="prev"
-            onClick={() => {
-              changeDate(CODE.DATE_YEAR, -1);
-            }}
-          />
-          <span>{searchCondition.year}년</span>
-          <button
-            className="next"
-            onClick={() => {
-              changeDate(CODE.DATE_YEAR, 1);
-            }}
-          />
-        </li>
-        <li className="half L">
-          <button
-            className="prev"
-            onClick={() => {
-              changeDate(CODE.DATE_MONTH, -1);
-            }}
-          />
-          <span>{searchCondition.month + 1}월</span>
-          <button
-            className="next"
-            onClick={() => {
-              changeDate(CODE.DATE_MONTH, 1);
-            }}
-          />
-        </li>
-        <li className="half R">
-          <button
-            className="prev"
-            onClick={() => {
-              changeDate(CODE.DATE_DATE, -1);
-            }}
-          />
-          <span>{searchCondition.date}일</span>
-          <button
-            className="next"
-            onClick={() => {
-              changeDate(CODE.DATE_DATE, 1);
-            }}
-          />
-        </li>
         <div style={{ display: "flex", width: '100%', alignItems: 'center', justifyContent: 'space-evenly' }}>
           <div>
             <SearchBar/>
@@ -266,7 +225,7 @@ const ConditionBar = ({ selectBar = true, onBeforeSubmit }) => {
           </div>
         </div>
       </ul>
-    </div>
+    </section>
   );
 };
 

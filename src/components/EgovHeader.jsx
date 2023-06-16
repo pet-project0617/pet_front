@@ -43,9 +43,6 @@ function EgovHeader({ loginUser, onChangeLogin }) {
     });
   };
 
-  console.log("------------------------------EgovHeader [End]");
-  console.groupEnd("EgovHeader");
-
   return (
     // <!-- header -->
     <div className="header">
@@ -72,7 +69,6 @@ function EgovHeader({ loginUser, onChangeLogin }) {
         </h1>
 
         <div className="gnb">
-          <h2 className="blind">주메뉴</h2>
           <ul className="nav_wrapper">
             <li>
               <NavLink
@@ -119,28 +115,6 @@ function EgovHeader({ loginUser, onChangeLogin }) {
           </ul>
         </div>
 
-        {/* <!-- PC web에서 보여지는 영역 --> */}
-        <div className="user_info">
-          {/* 로그아웃 : 로그인 정보 있을때 */}
-          {sessionUserId && (
-            <>
-              <span className="person">{sessionUserName} </span> 님이, 관리자로
-              로그인하셨습니다.
-              <button onClick={logOutHandler} className="btn">
-                로그아웃
-              </button>
-            </>
-          )}
-          {/* 로그인 : 로그인 정보 없을 때 */}
-          {!sessionUserId && (
-            <button onClick={logInHandler} className="btn login">
-              로그인
-            </button>
-          )}
-        </div>
-        {/* <!--// PC web에서 보여지는 영역 --> */}
-
-        {/* <!-- right area --> */}
         <div className="right_a">
           <button
             type="button"
@@ -161,7 +135,6 @@ function EgovHeader({ loginUser, onChangeLogin }) {
 
       {/* <!-- All menu : web --> */}
       <div className="all_menu WEB closed">
-        <h2 className="blind">전체메뉴</h2>
         <div className="inner">
           <div className="col">
             <h3>소개</h3>
@@ -174,10 +147,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                   사이트소개
                 </NavLink>
               </li>
-              {/* <li><NavLink to={URL.ABOUT_HISTORY} className={({ isActive }) => (isActive ? "cur" : "")}></NavLink></li> */}
-              {/* <li><NavLink to={URL.ABOUT_ORGANIZATION} className={({ isActive }) => (isActive ? "cur" : "")}>조직소개</NavLink></li> */}
-              {/* <li><NavLink to={URL.ABOUT_LOCATION} className={({ isActive }) => (isActive ? "cur" : "")}>찾아오시는 길</NavLink></li> */}
-            </ul>
+         </ul>
           </div>
           <div className="col">
             <h3>분양정보</h3>
@@ -249,14 +219,14 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                   입양 후기
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to={URL.INFORM_GALLERY}
                   className={({ isActive }) => (isActive ? "cur" : "")}
                 >
                   질문
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
           {sessionUserSe === "USR" && (
@@ -337,6 +307,15 @@ function EgovHeader({ loginUser, onChangeLogin }) {
           <h3>
             <Link to={URL.ABOUT}>사이트소개</Link>
           </h3>
+          <h3>
+            <Link to={URL.INTRO}>분양</Link>
+          </h3>
+          <h3>
+            <Link to={URL.SUPPORT}>마켓</Link>
+          </h3>
+          <h3>
+            <Link to={URL.INFORM}>후기</Link>
+          </h3>
           <div className="submenu closed">
             <ul>
               <li>
@@ -347,14 +326,8 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                   소개
                 </NavLink>
               </li>
-              {/* <li><NavLink to={URL.ABOUT_HISTORY} className={({ isActive }) => (isActive ? "cur" : "")}>연혁</NavLink></li> */}
-              {/* <li><NavLink to={URL.ABOUT_ORGANIZATION} className={({ isActive }) => (isActive ? "cur" : "")}>조직소개</NavLink></li> */}
-              {/* <li><NavLink to={URL.ABOUT_LOCATION} className={({ isActive }) => (isActive ? "cur" : "")}>찾아오시는 길</NavLink></li> */}
             </ul>
           </div>
-          <h3>
-            <Link to={URL.INTRO}>분양</Link>
-          </h3>
           <div className="submenu closed">
             <ul>
               <li>
@@ -376,9 +349,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
               </li>
             </ul>
           </div>
-          <h3>
-            <Link to={URL.SUPPORT}>마켓</Link>
-          </h3>
+          
           <div className="submenu closed">
             <ul>
               <li>
@@ -397,12 +368,9 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                   중고거래
                 </NavLink>
               </li>
-              {/* <li><NavLink to={URL.SUPPORT_APPLY} className={({ isActive }) => (isActive ? "cur" : "")}>서비스 신청</NavLink></li> */}
             </ul>
           </div>
-          <h3>
-            <Link to={URL.INFORM}>후기</Link>
-          </h3>
+          
           <div className="submenu closed">
             <ul>
               <li>
@@ -416,18 +384,17 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                   입양 후기
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to={URL.INFORM_NOTICE}
                   className={({ isActive }) => (isActive ? "cur" : "")}
                 >
                   질문
                 </NavLink>
-              </li>
-              {/* <li><NavLink to={URL.INFORM_GALLERY} className={({ isActive }) => (isActive ? "cur" : "")}>사이트 갤러리</NavLink></li> */}
-            </ul>
+              </li> */}
+              </ul>
           </div>
-          {sessionUserSe === "USR" && (
+          {/* {sessionUserSe === "USR" && (
             <>
               <h3>
                 <Link to={URL.ADMIN}>사이트관리</Link>
@@ -485,7 +452,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                 </ul>
               </div>
             </>
-          )}
+          )} */}
         </div>
       </div>
       {/* <!--// All menu --> */}

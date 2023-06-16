@@ -18,7 +18,6 @@ import EgovAboutSite from "pages/about/EgovAboutSite";
 import EgovAboutHistory from "pages/about/EgovAboutHistory";
 import EgovAboutHistory2 from "pages/about/EgovAboutHistory2";
 import EgovAboutOrganization from "pages/about/EgovAboutOrganization";
-import EgovAboutLocation from "pages/about/EgovAboutLocation";
 
 //SUPPORT
 import EgovSupportDownloadList from "pages/support/download/EgovDownloadList";
@@ -169,11 +168,13 @@ const SecondRoutes = () => {
             path={URL.ABOUT_ORGANIZATION}
             element={<EgovAboutOrganization />}
           />
-          <Route path={URL.ABOUT_LOCATION} element={<EgovAboutLocation />} />
 
           {/* INTRO */}
           <Route path={URL.INTRO} element={<Navigate to={URL.INTRO_WORKS} />} />
-          <Route path={URL.INTRO_WORKS} element={<AbandonedBreedServicePage />} />
+          <Route
+            path={URL.INTRO_WORKS}
+            element={<AbandonedBreedServicePage />}
+          />
           <Route path={URL.INTRO_SERVICE} element={<HomeBreedServicePage />} />
 
           {/* SUPPORT */}

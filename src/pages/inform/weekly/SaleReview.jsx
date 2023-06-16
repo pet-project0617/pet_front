@@ -29,26 +29,6 @@ function EgovDailyList(props) {
   const [listTag, setListTag] = useState([]);
   const [listCount, setListCount] = useState(0); //더보기(api 호출하는 방식)
 
-  /**
-   * BreadCrumb
-   */
-  const Location = React.memo(function Location() {
-    return (
-      <div className="location">
-        <ul>
-          <li>
-            <Link to={URL.MAIN} className="home">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to={URL.INFORM}>후기</Link>
-          </li>
-          <li>오늘의 마켓 후기</li>
-        </ul>
-      </div>
-    );
-  });
 
   /**
    * 조회 목록 세팅
@@ -66,7 +46,7 @@ function EgovDailyList(props) {
             console.log("onclickTarget:::: ", e.target);
           }}
         >
-          <span className="info">{item.info}</span>
+          <span className="info">{item.name}</span>
           <span className="user">{item.user}</span>
           <span className="date">{item.date}</span>
           <div className="content">{item.content}</div>
@@ -126,7 +106,6 @@ function EgovDailyList(props) {
   return (
     <div className="container">
       <div className="c_wrap">
-        <Location />
         <div className="layout">
           <EgovLeftNav />
           <div className="contents TODAY_SCHEDULE" id="contents">

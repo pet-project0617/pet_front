@@ -9,15 +9,7 @@ function EgovDownloadCreate() {
         <div className="container" >
             <div className="c_wrap">
                 {/* <!-- Location --> */}
-                <div>  
-                    <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to={URL.SUPPORT_DOWNLOAD}>마켓</Link></li>
-                        <li>물품 등록</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
+                <div> 
                 
                 
                 <div className="layout">

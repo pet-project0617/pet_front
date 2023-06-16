@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-
 import ConditionBar from "pages/admin/ConditionBar";
 
 import * as EgovNet from "api/egovFetch";
@@ -29,30 +28,6 @@ function EgovDailyList(props) {
   const [listTag, setListTag] = useState([]);
   const [listCount, setListCount] = useState(0); //더보기(api 호출하는 방식)
 
-
-
-  /**
-   * BreadCrumb
-   */
-  const Location = React.memo(function Location() {
-    return (
-      <div className="location">
-        <ul>
-          <li>
-            <Link to={URL.MAIN} className="home">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to={URL.INFORM}>후기</Link>
-          </li>
-          <li>오늘의 마켓 후기</li>
-        </ul>
-      </div>
-    );
-  });
-
-
   /**
    * 조회 목록 세팅
    */
@@ -64,16 +39,27 @@ function EgovDailyList(props) {
       mutListTag.push(
         <div
           key={index}
-          className="card_02 review"
+          className="card_03 review"
           onChange={(e) => {
             console.log("onclickTarget:::: ", e.target);
           }}
         >
-          <span className="info">{item.info}</span>
-          <span className="user">{item.user}</span>
-          <span className="date">{item.date}</span>
-          <div className="content">{item.content}</div>
-          <input name="chevron" type="checkbox" className="chevron" />
+          <img src={item.src || "/assets/images/1.png"} />
+          <ul className="review_info">
+            <li className="info">
+              <span className="title">{item.name}</span>
+              <span className="date">{item.date}</span>
+              </li>
+            <li className="user">
+              <img
+                className="profile_img"
+                src={item.src || "/assets/images/1.png"}
+              />
+              <span>{item.user}</span>
+            </li>
+            <li className="content">{item.content}</li>
+            {/* <input name="chevron" type="checkbox" className="chevron" /> */}
+          </ul>
         </div>
       );
     });
@@ -111,10 +97,7 @@ function EgovDailyList(props) {
     [drawList]
   );
 
-
-  const listMore = useCallback(() => {
-
-  },[listCount])
+  const listMore = useCallback(() => {}, [listCount]);
 
   useEffect(() => {
     retrieveList(searchCondition);
@@ -124,17 +107,14 @@ function EgovDailyList(props) {
     drawList();
   }, [scheduleList]);
 
-
   const listScheduleList = async (data) => {
     setListCount((prev) => prev + 30);
     setScheduleList(data);
   };
 
-
   return (
     <div className="container">
       <div className="c_wrap">
-        <Location />
         <div className="layout">
           <EgovLeftNav />
           <div className="contents TODAY_SCHEDULE" id="contents">

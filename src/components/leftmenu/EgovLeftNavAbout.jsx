@@ -10,9 +10,6 @@ function EgovLeftNavAbout() {
                 <h2>사이트 소개</h2>
                 <ul className="menu4">
                     <li><NavLink to={URL.ABOUT_SITE} className={({ isActive }) => (isActive ? "cur" : "")}>소개</NavLink></li>
-                    {/* <li><NavLink to={URL.ABOUT_HISTORY} className={({ isActive }) => (isActive ? "cur" : "")}>목적</NavLink></li> */}
-                    {/* <li><NavLink to={URL.ABOUT_ORGANIZATION} className={({ isActive }) => (isActive ? "cur" : "")}>개발자 소개</NavLink></li> */}
-                    {/* <li><NavLink to={URL.ABOUT_LOCATION} className={({ isActive }) => (isActive ? "cur" : "")}>찾아오시는 길</NavLink></li> */}
                 </ul>
             </div>
         </div>

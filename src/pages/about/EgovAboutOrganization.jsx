@@ -6,22 +6,6 @@ function EgovDownloadCreate() {
   return (
     <div className="container">
       <div className="c_wrap">
-        {/* <!-- Location --> */}
-        <div className="location">
-          <ul>
-            <li>
-              <Link to={URL.MAIN} className="home">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to={URL.INTRO_WORKS}>분양</Link>
-            </li>
-            <li>분양 등록</li>
-          </ul>
-        </div>
-        {/* <!--// Location --> */}
-
         <div className="layout">
 
           <div className="contents PDS_REG" id="contents">

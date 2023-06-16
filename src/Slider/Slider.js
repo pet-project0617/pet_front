@@ -166,8 +166,6 @@ function Slider() {
           className="slider-list"
           style={{
             padding: sliderPaddingStyle,
-            marginLeft: "50px",
-            borderRadius: "10px",
           }}
         >
           <div
@@ -189,7 +187,7 @@ function Slider() {
                   className={`slider-item ${
                     currentIndex === slideIndex ? "current-slide" : ""
                   }`}
-                  style={{ width: newItemWidth || "auto" }}
+                  style={{ width: '100vw' || "auto" }}
                   onMouseDown={handleTouchStart}
                   onTouchStart={handleTouchStart}
                   onTouchMove={handleTouchMove}

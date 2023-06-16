@@ -30,83 +30,10 @@ function EgovMain(props) {
       title: "서초 동물보호소",
       description: "5살 비숑",
     },
-    {
-      imageSrc: "/assets/images/1.png",
-      title: "성동 동물보호소",
-      description: "2개월 포메",
-    },
-    {
-      imageSrc: "/images/3.jpg",
-      title: "동대문구 동물보호소",
-      description: "3개월 길냥이",
-    },
-    {
-      imageSrc: "images/22.jpg",
-      title: "서초 동물보호소",
-      description: "5살 비숑",
-    },
-    {
-      imageSrc: "/assets/images/1.png",
-      title: "성동 동물보호소",
-      description: "2개월 포메",
-    },
-    {
-      imageSrc: "/images/3.jpg",
-      title: "동대문구 동물보호소",
-      description: "3개월 길냥이",
-    },
-    {
-      imageSrc: "images/22.jpg",
-      title: "서초 동물보호소",
-      description: "5살 비숑",
-    },
-    {
-      imageSrc: "/assets/images/1.png",
-      title: "성동 동물보호소",
-      description: "2개월 포메",
-    },
-    {
-      imageSrc: "/images/3.jpg",
-      title: "동대문구 동물보호소",
-      description: "3개월 길냥이",
-    },
-    {
-      imageSrc: "images/22.jpg",
-      title: "서초 동물보호소",
-      description: "5살 비숑",
-    },
-    {
-      imageSrc: "/assets/images/1.png",
-      title: "성동 동물보호소",
-      description: "2개월 포메",
-    },
-    {
-      imageSrc: "/images/3.jpg",
-      title: "동대문구 동물보호소",
-      description: "3개월 길냥이",
-    },
-    {
-      imageSrc: "images/22.jpg",
-      title: "서초 동물보호소",
-      description: "5살 비숑",
-    },
-    {
-      imageSrc: "/assets/images/1.png",
-      title: "성동 동물보호소",
-      description: "2개월 포메",
-    },
-    {
-      imageSrc: "/images/3.jpg",
-      title: "동대문구 동물보호소",
-      description: "3개월 길냥이",
-    },
-    {
-      imageSrc: "images/22.jpg",
-      title: "서초 동물보호소",
-      description: "5살 비숑",
-    },
+    
   ];
 
+  const [contentData, setContentData]= useState([])
   const getPetBoardList = useCallback(() => {
     console.groupCollapsed("EgovMain.retrieveList()");
 
@@ -122,8 +49,17 @@ function EgovMain(props) {
     EgovNet.requestFetch(
       url,
       options,
-      (res) => {
+      (res = []) => {
         console.log(res);
+        let arr= []
+        res.map(item => {
+          arr.push({
+            title: item.name,
+            description: item.content,
+          })
+        })
+        console.log(arr)
+        setContentData(arr)
         // setNoticeBoard(resp.result.notiList);
         // setGallaryBoard(resp.result.galList);
 
@@ -186,16 +122,20 @@ function EgovMain(props) {
   return (
     <div>
       <Slider />
-      <h2 style={{ fontSize: "30px", margin: "0 20px" }}>분양 정보</h2>
-      <ContentSlider data={data} />
+      <section
+        style = {{
+          padding: '20% 0'
+        }}
+      >
+        <h2 style={{ fontSize: "30px", margin: "0 20px" }}>분양 정보</h2>
+        <ContentSlider data={contentData.length > 0 ? contentData : data} />
+      </section>
       <div
         className="media-text"
         style={{ marginLeft: "50px", marginTop: "100px" }}
       >
         <div style={{ marginLeft: "100px", marginTop: "100px" }}>
           <h2>근처 보호소에 있는 유기동물</h2>
-          <br />
-          <br />
           <div style={{ background: "black", width: "1200px" }}></div>
           <p>
             전국에 있는 동물 보호소는 206곳으로 보호 센터가 있으며
@@ -266,7 +206,7 @@ function EgovMain(props) {
         </div>
       </div>
 
-      <div style={{ display: "flex", margin: "110px", marginBottom: "200px" }}>
+      <div className="news_area" style={{ display: "flex", margin: "110px", marginBottom: "200px" }}>
         <div
           className="media-container"
           style={{
@@ -282,9 +222,8 @@ function EgovMain(props) {
           <iframe
             width="800"
             height="500"
-            src="https://www.youtube-nocookie.com/embed/RjWbd3MQnrU?autoplay=1&mute=1"
+            src="https://www.youtube-nocookie.com/embed/RjWbd3MQnrU?autoplay=1&mute=1&loop=1&control=1"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
@@ -294,26 +233,28 @@ function EgovMain(props) {
           style={{ marginLeft: "50px", marginTop: "120px" }}
         >
           <h2>반려동물은 장난감이 아니에요</h2>
-          <br />
-          <br />
-          <div style={{ background: "black", width: "1200px" }}></div>
           <p>
             인간의 삶을 변화시키고 긍정적인 에너지를 생기게 도와줘요.
             <br />
-            반려동물의 체온은 사람보다 1~2도 가량 높아요. 안으면 따뜻할 뿐만
-            아니라 포근한 털이 있어서 정서적 안정을 줘요.
+            반려동물의 체온은 사람보다 1~2도 가량 높아요. 
+            <br />
+            안으면 따뜻할 뿐만 아니라 포근한 털이 있어서 정서적 안정을 줘요.
             <br />
             불안감, 스트레스, 맥박, 혈랍압 등에서 헌저한 개선 효과를 얻을 수
             있어요.
           </p>
           <p>
-            동물보호단체에서는 "반려동물을 쉽게 살 수 있는 구조가 생명 경시
-            풍토를 조성한다"라고 말했어요
+            동물보호단체에서는
+            <br />
+            "반려동물을 쉽게 살 수 있는 구조가 생명 경시 풍토를 조성한다"
+            <br />
+            라고 말했어요
             <br />
             인간의 생명과 같이 동물의 생명도 소중하답니다.
             <br />
-            반려동물을 상업적 목적으로 활용하지 말아주세요. 지능이 낮더라도
-            생각하고 조금씩 표현 할 수 있어요.
+            반려동물을 상업적 목적으로 활용하지 말아주세요. 
+            <br />
+            지능이 낮더라도 생각하고 조금씩 표현 할 수 있어요.
             <br />
             반려동물은 가족이에요, 인간보다 짧은 시간을 가졌지만 그 짧지만
             전부인 시간 속에서 인간을 대가없이 좋아해줘요.
@@ -322,9 +263,6 @@ function EgovMain(props) {
           </p>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
     </div>
   );
 }
