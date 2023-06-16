@@ -4,7 +4,7 @@ import Table3 from 'components/table3';
 import URL from 'constants/url';
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavAbout';
 
-function EgovAboutHistory() {
+const EgovAboutHistory = ({info}) => {
     const data = [
         {
           imageSrc: "/assets/images/1.png",
@@ -21,7 +21,7 @@ function EgovAboutHistory() {
 
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
+                {/* <!-- BreadCrumb --> */}
                 <div className="location">
                     <ul>
                         <li><Link to={URL.MAIN} className="home" >Home</Link></li>
@@ -29,17 +29,11 @@ function EgovAboutHistory() {
                         <li>해당 게시물 상세</li>
                     </ul>
                 </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     <div className="contents SITE_INTRO" id="contents">
-                        {/* <!-- 본문 --> */}
                         <h1 className="tit_3">상세</h1>
-                        <br/>
-<br/><br/><br/>
                         <Table3 data={data} />
-
-                        {/* <!--// 본문 --> */}
                     </div>
                 </div>
             </div>

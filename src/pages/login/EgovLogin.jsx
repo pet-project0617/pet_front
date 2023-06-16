@@ -20,14 +20,6 @@ function EgovLogin(props) {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li>로그인</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     <EgovLoginContent

@@ -79,15 +79,6 @@ function EgovDailyDetail(props) {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home">Home</Link></li>
-                        <li><Link to={URL.INFORM}>알림마당</Link></li>
-                        <li>일정관리</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}

@@ -29,6 +29,13 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, thead, tb
     margin: 0; padding: 0;
 }
 
+a:link,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 blockquote, button, fieldset, iframe {border: 0;}
 cite, em, u, address, i {font-style: normal;}
 img {border: 0; vertical-align: top;}
@@ -69,9 +76,14 @@ button {cursor: pointer;}
 .w_350 {width: 350px;}
 .w_400 {width: 400px;}
 .w_500 {width: 500px;}
+.w50p {width: 50%;}
+.w70p {width: 70%;}
+.w80p {width: 80%;}
+.w100p {width: 100%;}
 
 .h_30 {height: 30px;}
 .h_100 {height: 100px;}
+.h_full {height: 100%;}
 
 
 /* 여백 */
@@ -80,3 +92,6 @@ button {cursor: pointer;}
 .mt40 {margin-top: 40px !important;}
 .ml10 {margin-left: 10px !important;}
 .pb10 {padding-bottom: 10px !important;}
+.mg20 {margin: 20px !important;}
+
+.mgl0 {margin-left: 0px !important;}

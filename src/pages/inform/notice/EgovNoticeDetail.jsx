@@ -90,16 +90,6 @@ function EgovNoticeDetail(props) {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home">Home</Link></li>
-                        <li><Link to={URL.INFORM}>후기</Link></li>
-                        <li>{masterBoard && masterBoard.bbsNm}</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
-
                 <div className="layout">
                     {/* <!-- Navigation --> */}
                     <EgovLeftNav></EgovLeftNav>

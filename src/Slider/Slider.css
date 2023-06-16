@@ -1,10 +1,10 @@
 .slider-area{
     /* position: relative; */
     /* overflow: hidden; */
-    height:  800px;
-    width: auto;
-    margin-bottom: 150px;
-
+    height:  100vh;
+    width: 100vw;
+    /* margin-top: -100px;
+    z-index: -9999; */
 }
 
 .slider{
@@ -33,7 +33,6 @@
 .slider-track{
     position: relative;
     position: relative;
-    left: 50%;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -46,17 +45,14 @@
 
 .slider-item{
     position: relative;
-    height: 750px;
-    padding: 10px;
-    float: left;
-    /* width: 200px; */
+    height: 100vh;
+    width: 100vw;
     -webkit-filter: brightness(50%);
     filter: brightness(50%);
 }
 
 .slider-item span{
     font-size: 18px;
-    margin-bottom: 1rem ;
 }
 .current-slide{
     -webkit-filter: none;

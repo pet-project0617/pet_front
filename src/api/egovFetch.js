@@ -3,6 +3,14 @@ import { SERVER_URL } from '../config';
 import URL from 'constants/url';
 import CODE from 'constants/code';
 
+
+/**
+ * send request function
+ * @param {String} url api url
+ * @param {*} requestOptions parameters
+ * @param {*} handler response callback
+ * @param {*} errorHandler catch callback
+ */
 export function requestFetch(url, requestOptions, handler, errorHandler) {
     console.groupCollapsed("requestFetch");
     console.log("requestFetch [URL] : ", SERVER_URL + url);

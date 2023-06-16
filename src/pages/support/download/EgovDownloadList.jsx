@@ -43,15 +43,6 @@ function EgovDownloadList() {
     return(
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to="">마켓</Link></li>
-                        <li>무료나눔</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}
@@ -66,8 +57,6 @@ function EgovDownloadList() {
                         </div>
                         
                         <h2 className="tit_2">무료나눔</h2>
-
-
 
 
                         <NavLink to={URL.ABOUT_HISTORY2} className={({isActive}) => (isActive ? "cur": "")}>       <Table1 data={data} /></NavLink>

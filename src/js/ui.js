@@ -89,7 +89,7 @@ export default function initPage() {
              el.parentElement.classList[el.checked ? 'add' : 'remove']('on');
             }
         });
-        // 홈페이지 템플릿 소개팝업
+        
         const template = {
             init: function() {
                 this.$tg = document.querySelector('.TEMPLATE_INTRO');
