@@ -190,15 +190,6 @@ function EgovAdminUsageEdit(props) {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><a className="home" href="#!">Home</a></li>
-                        <li><a href="#!">사이트관리</a></li>
-                        <li>게시판사용관리</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}

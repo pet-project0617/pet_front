@@ -73,14 +73,6 @@ function EgovAdminPasswordUpdate(props) {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home">Home</Link></li>
-                        <li><Link to={URL.ADMIN}>사이트관리</Link></li>
-                        <li>사이트관리자 암호변경</li>
-                    </ul>
-                </div>
                 {/* <!--// Location --> */}
 
                 <div className="layout">

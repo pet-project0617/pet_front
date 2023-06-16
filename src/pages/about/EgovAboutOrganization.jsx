@@ -187,8 +187,7 @@ function EgovDownloadCreate() {
               </div>
 
               <p style={{ marginTop: "-20px" }}>
-                {`분양 설명에는 거래하는 장소나 병원 기록 등 자세하게 적어주세요
-                :)`}
+                {`분양 설명에는 거래하는 장소나 병원 기록 등 자세하게 적어주세요  :)`}
               </p>
               <br />
               <div className="board_btn_area">

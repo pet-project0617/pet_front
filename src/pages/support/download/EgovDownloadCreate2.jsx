@@ -6,8 +6,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { GALLERY_BBS_ID } from "config";
 
-function EgovDownloadCreate() {
-    const currentDate = `${new Date().getFullYear()}:${new Date().getMonth()}:${new Date().getDate()}`
+function EgovDownloadCreate({ type, setOpenPopUp, onReset, title }) {
+  const currentDate = `${new Date().getFullYear()}년 ${
+    new Date().getMonth() + 1
+  }월 ${new Date().getDate()}일`;
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,7 +32,7 @@ function EgovDownloadCreate() {
     content: "",
     // atchFileId: "",
     userSeq: "1",
-    deleteYn: "",
+    deleteYn: "N",
     contentType: "A", //게시판 타입
     views: "",
   });
@@ -81,13 +83,18 @@ function EgovDownloadCreate() {
     return boardInfo.title && boardInfo.content.length > 0;
   };
 
+  const onClose = () => {
+    setOpenPopUp(false);
+    onReset();
+  };
+
   const createBoard = () => {
     const formData = new FormData();
     for (let key in boardInfo) {
       formData.append(key, boardInfo[key]);
     }
 
-    console.log(boardInfo);
+    console.log("boardInfo", boardInfo);
     const jToken = localStorage.getItem("jToken");
 
     if (checkValidate(formData)) {
@@ -104,7 +111,9 @@ function EgovDownloadCreate() {
         requestOptions,
         (resp) => {
           if (Number(resp.resultCode) === Number(CODE.RCV_SUCCESS)) {
-            navigate(URL.INFORM_GALLERY, { state: { bbsId: bbsId } });
+            // navigate(URL.INFORM_GALLERY, { state: { bbsId: bbsId } });
+            setOpenPopUp(false);
+            typeof onReset === "function" && onReset();
           } else {
             navigate(
               { pathname: URL.ERROR },
@@ -119,121 +128,88 @@ function EgovDownloadCreate() {
   useEffect(() => {
     getList();
   }, []);
-
   return (
-    <div className="container">
-      <div className="c_wrap">
-        {/* <!-- Location --> */}
-        <div className="location">
-          <ul>
-            <li>
-              <Link to={URL.MAIN} className="home">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to={URL.INTRO_WORKS}>분양</Link>
-            </li>
-            <li>분양 등록</li>
-          </ul>
+    <div
+      style={{
+        backgroundColor: "white",
+        boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        borderRadius: "10px",
+        padding: "20px",
+        width: "50%",
+      }}
+    >
+      {/* <!-- Navigation --> */}
+      {/* <!--// Navigation --> */}
+      <div className="contents PDS_REG" id="contents">
+        <h2 className="tit_2">{title}</h2>
+        <div className="btn_container">
+          <button
+            type="button"
+            className="btn modal_btn"
+            title="전체메뉴 닫힘"
+            onClick={onClose}
+          />
         </div>
-        {/* <!--// Location --> */}
 
-        <div className="layout">
-          {/* <!-- Navigation --> */}
-          {/* <!--// Navigation --> */}
-
-          <div className="contents PDS_REG" id="contents">
-            {/* <!-- 본문 --> */}
-
-            <div className="top_tit">
-              <h1 className="tit_1">마켓</h1>
-            </div>
-
-            <h2 className="tit_2">물품 등록</h2>
-            {/* 무료나눔 중고 마켓 구분 */}
-
-            {/* <!-- 상세 --> */}
-            <div className="board_view3">
-              <div className="tit_edit">
-                <dl>
-                  <dt>
-                    <label htmlFor="writer">제목</label>
-                  </dt>
-                  <dd>
-                    <input
-                      className="f_input2 w_full"
-                      type="text"
-                      name="title"
-                      id="writer"
-                      value={boardInfo.title}
-                      onChange={handleChange}
-                    />
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label htmlFor="writer">이름</label>
-                  </dt>
-                  <dd>
-                    <input
-                      className="f_input2 w_full"
-                      type="text"
-                      name="name"
-                      id="writer"
-                      value={boardInfo.name}
-                      onChange={handleChange}
-                    />
-                  </dd>
-                </dl>
-              </div>
-
-              <div className="info">
-                {/* db에서 불러와야하는 부분 */}
-                <dl>
-                  <dt>작성자</dt>
-                  <dd>{boardInfo.userId}</dd>
-                </dl>
-                <dl>
-                  <dt>작성일</dt>
-                  <dd>{currentDate}</dd>
-                </dl>
-              </div>
-              <br />
-              <h3 className="tit_5">
-                <label htmlFor="pdsnm"> 입력</label>
-              </h3>
-              <div className="pds_desc_edit">
-                <textarea
-                  className="f_txtar w_full"
-                  name="content"
-                  id="pdsnm"
-                  cols="30"
-                  rows="10"
-                  value={boardInfo.content}
-                  onChange={handleChange}
-                  placeholder={`분양 설명에는 거래하는 장소나 병원 기록 등 자세하게 적어주세요 :)`}
-                ></textarea>
+        <div className="board_view3">
+          <div className="tit_edit">
+            <dl>
+              <dt>
+                <label htmlFor="writer">제목</label>
+              </dt>
+              <dd>
                 <input
-                  className="w_full"
-                  type="file"
-                  name="img"
-                  id="ip4"
-                  style={{ display: "inline-block" }}
+                  className="f_input2 w_full"
+                  type="text"
+                  name="title"
+                  id="writer"
+                  value={boardInfo.title}
+                  onChange={handleChange}
                 />
-              </div>
-              <br />
-              <div className="board_btn_area">
-                <div className="left_col btn1"></div>
+              </dd>
+            </dl>
+          </div>
 
-                <div className="right_col btn1">
-                  {/* <Link to={URL.INTRO_WORKS} className="btn btn_blue_h46 w_100">
-                    등록
-                  </Link> */}
-                  <div onClick={createBoard} className="btn btn_blue_h46 w_100">
-                    등록
-                  </div>
-                </div>
+          <div className="info">
+            {/* db에서 불러와야하는 부분 */}
+            <dl>
+              <dt className="tit_7">작성자</dt>
+              <dd>test</dd>
+            </dl>
+            <dl>
+              <dt className="tit_7">작성일</dt>
+              <dd>{currentDate}</dd>
+            </dl>
+          </div>
+          <br />
+          <h3 className="tit_6">
+            <label htmlFor="pdsnm">설명 입력</label>
+          </h3>
+
+          <div className="pds_desc_edit">
+            <textarea
+              className="f_txtar w_full"
+              name="content"
+              id="pdsnm"
+              cols="20"
+              rows="10"
+              onChange={handleChange}
+              value={boardInfo.content}
+              placeholder={`분양 설명에는 거래하는 장소나 병원 기록 등 자세하게 적어주세요 :)`}
+            ></textarea>
+            <input
+              className="w_full"
+              type="file"
+              name=""
+              id="ip4"
+              style={{ display: "inline-block" }}
+            />
+          </div>
+          <br />
+          <div className="board_btn_area">
+            <div className="right_col btn1">
+              <div onClick={createBoard} className="btn btn_blue_h46 w_100">
+                등록
               </div>
             </div>
           </div>

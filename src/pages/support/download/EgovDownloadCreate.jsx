@@ -5,30 +5,28 @@ import { default as EgovLeftNav } from "components/leftmenu/EgovLeftNavSupport";
 import URL from "constants/url";
 
 function EgovDownloadCreate() {
-  return (
-    <div className="container">
-      <div className="c_wrap">
-        {/* <!-- Location --> */}
-        <div>
-          <div className="location">
-            <ul>
-              <li>
-                <Link to={URL.MAIN} className="home">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to={URL.SUPPORT_DOWNLOAD}>마켓</Link>
-              </li>
-              <li>물품 등록</li>
-            </ul>
-          </div>
-          {/* <!--// Location --> */}
+    return(
+        <div className="container" >
+            <div className="c_wrap">
+                {/* <!-- Location --> */}
+                <div>  
+                    <div className="location">
+                    <ul>
+                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
+                        <li><Link to={URL.SUPPORT_DOWNLOAD}>마켓</Link></li>
+                        <li>물품 등록</li>
+                    </ul>
+                </div>
+                {/* <!--// Location --> */}
+                
+                
+                <div className="layout">
+                    {/* <!-- Navigation --> */}
+                  
+                    {/* <!--// Navigation --> */}
 
-          <div className="layout">
-
-            <div className="contents PDS_REG" id="contents">
-              {/* <!-- 본문 --> */}
+                    <div className="contents PDS_REG" id="contents">
+                        {/* <!-- 본문 --> */}
 
               <div className="top_tit">
                 <h1 className="tit_1">마켓</h1>

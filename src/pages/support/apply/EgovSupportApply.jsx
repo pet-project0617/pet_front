@@ -8,15 +8,6 @@ function EgovSupportApply() {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to={URL.MAIN} className="home" >Home</Link></li>
-                        <li><Link to="">마켓</Link></li>
-                        <li>용품 주의</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}
@@ -26,7 +17,7 @@ function EgovSupportApply() {
                     <div className="contents SITE_INTRO" id="contents">
                         {/* <!-- 본문 --> */}
 
-                        <h1 className="tit_3">마켓</h1>
+                        <h1 className="tit_3">주의 사항</h1>
 
                         <p className="txt_1">반려동물에게 위험한 음식과 용품을 한 눈에 볼 수 있어요</p>
                         

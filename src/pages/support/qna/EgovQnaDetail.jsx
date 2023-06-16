@@ -7,15 +7,6 @@ function EgovQnaDetail() {
     return (
         <div className="container">
             <div className="c_wrap">
-                {/* <!-- Location --> */}
-                <div className="location">
-                    <ul>
-                        <li><Link to="" className="home">Home</Link></li>
-                        <li><Link to="">고객지원</Link></li>
-                        <li>소개</li>
-                    </ul>
-                </div>
-                {/* <!--// Location --> */}
 
                 <div className="layout">
                     {/* <!-- Navigation --> */}

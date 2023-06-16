@@ -6,22 +6,37 @@
     /* Layout */
     body {min-width: auto;}
 
-    .header .inner {width: 100%; height: 70px; padding: 0 20px;}
+    .all_menu.WEB .inner {    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .all_menu.WEB .inner .col{
+        text-align: center;
+    }
+    .all_menu.WEB .inner .col ul{
+        padding-top: 10px;
+        padding-bottom: 36px !important;
+    }
+    /* .header .inner {width: 100%; height: 70px; padding: 0 20px;} */
     .header h1 {margin-top: 22.5px;}
     .header .logo .w {display: none;}
     .header .logo .m {display: block;}
     .header .logo .m img {height: 25px;}
     .lnk_go_template,
-    .header .gnb,
     .header .user_info {display: none;}
     .header .right_a {right: 20px; top: 20px;}
     .header .right_a .btn {display: none;}
     .header .right_a .btn.mobile {display: block;}
 
-    .all_menu.WEB {display: none !important;}
 
-    .all_menu.Mobile {display: block; position: fixed; top: 0; width: 100%; height: 100%; background: #fff; overflow-y: auto;}
-    .all_menu.Mobile.closed { transform: translateX(-800px); }
+/* 
+    .all_menu.WEB {display: none !important;} */
+
+    /* .all_menu.Mobile {display: block; position: fixed; top: 0; width: 100%; height: 100%; background: #fff; overflow-y: auto;}
+    .all_menu.Mobile.closed { transform: translateX(-800px); } */
     .user_info_m {display: block; position: relative; height: 70px; padding: 0 20px; color: #666; font-size: 12px; line-height: 70px; background: #fff;}
     .user_info_m .person {color: #169bd5; font-weight: 700; letter-spacing: -1px;}
     .user_info_m .person::before {content: ""; display: inline-block; width: 22px; height: 22px; margin-right: 9px; background: url(css/images/ico_person.png) no-repeat; background-size: contain; vertical-align: -6px;}
@@ -30,7 +45,7 @@
     .user_info_m .logout {width: 80px; height: 25px; color: #222; font-weight: 700; border-radius: 15px; color: #fff; font-size: 13px; line-height: 20px; background: #169bd5; vertical-align: middle;}
     .user_info_m .close {display: block; position: absolute; right: 20px; top: 24px; width: 21px; height: 21px; background: url(css/images/ico_close_black44.png) no-repeat; background-size: contain;}
 
-    .all_menu.Mobile .menu {border-top: 10px solid #f5f6f7;}
+    /* .all_menu.Mobile .menu {border-top: 10px solid #f5f6f7;}
     .all_menu.Mobile .menu h3 {position: relative;}
     .all_menu.Mobile .menu h3::after {content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #eee;}
     .all_menu.Mobile h3 a {display: block; position: relative; padding: 20px; color: #222; font-size: 15px; background: #fff;}
@@ -39,9 +54,9 @@
     .all_menu.Mobile .submenu { overflow: hidden; transition: height .2s ease-in-out, padding .2s ease-in-out; }
     .all_menu.Mobile .submenu.closed { height: 0; }
     .all_menu.Mobile ul { padding: 9px 0; background: #f5f8fa; }
-    .all_menu.Mobile ul li a {display: block; padding: 11px 30px; color: #222; font-size: 14px;}
+    .all_menu.Mobile ul li a {display: block; padding: 11px 30px; color: #222; font-size: 14px;} */
 
-    .c_wrap {width: 100%; padding: 0; border: #000 1px solids;}
+    /* .c_wrap {width: 100%; padding: 0; border: #000 1px solid;} */
     .c_wrap .layout {display: block; left: 300px;}
     .c_wrap .layout .nav {display: block; position: relative; width: 100%;}
     .c_wrap .layout .nav .inner {border: 0; border-radius: 0; border-bottom: 1px solid #e6e6e6; overflow-x: auto; -ms-overflow-style: none; box-shadow: 3px 4px 5px #ccc;}

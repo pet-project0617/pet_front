@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+
 import ConditionBar from "pages/admin/ConditionBar";
 
 import * as EgovNet from "api/egovFetch";
@@ -26,35 +27,8 @@ function EgovDailyList(props) {
 
   const [scheduleList, setScheduleList] = useState([]);
   const [listTag, setListTag] = useState([]);
-  const [listCount, setListCount] = useState(0);
+  const [listCount, setListCount] = useState(0); //더보기(api 호출하는 방식)
 
-  const getPetBoardList = useCallback(() => {
-    const url = "/pet/user/boardListAPI.do";
-    const options = {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(),
-    };
-
-    EgovNet.requestFetch(
-      url,
-      options,
-      (res = []) => {
-        console.log(res.result.resultList);
-        let arr = [];
-        setScheduleList(res.result.resultList);
-      },
-      (e) => {
-        console.log("PET LIST ERR!!--- ", e);
-      }
-    );
-  }, []);
-
-  useEffect(() => {
-    getPetBoardList();
-  }, []);
 
   /**
    * 조회 목록 세팅
@@ -64,31 +38,19 @@ function EgovDailyList(props) {
 
     // 리스트 항목 구성
     scheduleList.forEach((item, index) => {
-      console.log(item);
       mutListTag.push(
         <div
           key={index}
-          className="card_03 review"
+          className="card_02 review"
           onChange={(e) => {
             console.log("onclickTarget:::: ", e.target);
           }}
         >
-          <img src={item.src || "/assets/images/1.png"} />
-          <ul className="review_info">
-            <li className="info">
-              <span className="title">{item.title}</span>
-              <span className="date">{item.date}</span>
-            </li>
-            <li className="user">
-              <img
-                className="profile_img"
-                src={item.src || "/assets/images/1.png"}
-              />
-              <span>{item.name}</span>
-            </li>
-            <li className="content" >{item.content}</li>
-            {/* <input name="chevron" type="checkbox" className="chevron" /> */}
-          </ul>
+          <span className="info">{item.name}</span>
+          <span className="user">{item.user}</span>
+          <span className="date">{item.date}</span>
+          <div className="content">{item.content}</div>
+          <input name="chevron" type="checkbox" className="chevron" />
         </div>
       );
     });
@@ -148,9 +110,9 @@ function EgovDailyList(props) {
           <EgovLeftNav />
           <div className="contents TODAY_SCHEDULE" id="contents">
             <div className="top_tit">
-              <h1 className="tit_1">마켓 후기</h1>
+              <h1 className="tit_1">입양 후기</h1>
             </div>
-            {/* <ConditionBar onBeforeSubmit={listScheduleList} selectBar={false} /> */}
+            <ConditionBar onBeforeSubmit={listScheduleList} selectBar={false} />
             <div className="board_02">{listTag}</div>
           </div>
         </div>
