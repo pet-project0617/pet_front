@@ -119,7 +119,7 @@ npm install
 
 ```bash
 # .env.development 예시
-REACT_APP_EGOV_CONTEXT_URL=localhost:8080
+REACT_APP_EGOV_CONTEXT_URL=localhost:8081
 ```
 
 ### 3. 프로젝트 실행 및 기타 명령어

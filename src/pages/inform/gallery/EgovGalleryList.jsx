@@ -59,6 +59,7 @@ function EgovGalleryList(props) {
 
                 // 리스트 항목 구성
                 resp.result.resultList.forEach(function (item, index) {
+                    console.log(item)
                     if (index === 0) mutListTag = []; // 목록 초기화
                     const listIdx = itemIdxByPage(resultCnt , currentPageNo, pageSize, index);
 
